@@ -174,7 +174,11 @@ int Stand::findViaturaId()
     int id = -1;
     string matricula;
 
-    system("clear");
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
 
     for(int i = 0; i < m_listaViaturas.size(); i++)
         cout << i << ") " << m_listaViaturas.at(i).getMarca()
